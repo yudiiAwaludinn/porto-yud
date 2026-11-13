@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="id" data-theme="light" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Beranda | Yudi Awaludin</title>
+    <meta name="description" content="Portofolio Yudi Awaludin, web developer dan desainer UI/UX." />
+    <script>
+      /* Terapkan tema sebelum halaman digambar agar tidak berkedip */
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("theme"); } catch (e) {}
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute("data-bs-theme", t);
+      })();
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Yudi Awaludin</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Buka menu navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link" href="project.html">Karya</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Kontak</a></li>
+            <li class="nav-item">
+              <button type="button" class="theme-toggle" id="themeToggle" aria-label="Ganti ke mode gelap" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Bagian utama (hero) -->
+      <section id="home" class="hero">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7">
+              <p class="role mb-2"><span id="greeting">Selamat datang</span>, saya</p>
+              <h1>
+                Yudi Awaludin
+              </h1>
+              <p class="typed-line"><span class="visually-hidden">Web developer dan desainer UI/UX</span><span id="typed" aria-hidden="true">web developer</span><span class="caret" aria-hidden="true"></span></p>
+              <p class="lead-text">
+                Saya tertarik pada dunia pemograman dan pengembangan website. Saat ini saya terus belajar, mengembangkan kemampuan, dan membangun proyek di bidang teknologi.
+              </p>
+              <div class="d-flex flex-wrap gap-3">
+                <a href="project.html" class="btn-solid">Lihat karya saya</a
+                ><a href="contact.html" class="btn-line">Hubungi saya</a>
+              </div>
+            </div>
+            <div class="col-lg-5">
+              <div class="portrait-wrap">
+                <div class="ph ph-portrait" data-label="Foto profil">
+                  <img
+                    src="img/foto.jpg"
+                    alt="Foto Yudi Awaludin"
+                    onerror="this.remove()"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ringkasan angka (counter) -->
+      <section class="stats" aria-label="Ringkasan">
+        <div class="container">
+          <div class="row g-4">
+            <div class="col-4"><div class="stat"><span class="stat-num" data-stat="projects">6</span><span class="stat-label">Karya pilihan</span></div></div>
+            <div class="col-4"><div class="stat"><span class="stat-num" data-stat="categories">4</span><span class="stat-label">Kategori karya</span></div></div>
+            <div class="col-4"><div class="stat"><span class="stat-num" data-stat="skills">12</span><span class="stat-label">Keahlian dan alat</span></div></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Karya pilihan (3 kartu) -->
+      <section id="work" class="section">
+        <div class="container">
+          <div class="section-head"><h2>Karya pilihan</h2></div>
+          <div class="row g-4" id="featuredGrid"></div>
+          <div class="featured-more">
+            <a href="project.html" class="btn-navy-line">Lihat semua karya <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Modal detail karya -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="projectModalTitle"></h2>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
+          </div>
+          <div class="modal-body">
+            <div class="ph ph-wide mb-4" id="modalPh" data-label="Pratinjau karya"></div>
+            <span class="modal-cat" id="modalCat"></span>
+            <p id="modalDetail"></p>
+            <h3 class="modal-sub">Teknologi yang dipakai</h3>
+            <ul class="tech-list" id="modalTech"></ul>
+            <p class="modal-credit" id="modalCredit"></p>
+          </div>
+          <div class="modal-footer">
+            <a id="modalLink" class="btn-navy-line" href="#" target="_blank" rel="noopener" hidden>Buka sumber</a>
+            <button type="button" class="btn-solid border-0" data-bs-dismiss="modal">Tutup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a href="index.html" class="brand">Yudi Awaludin</a>
+            <p>
+              Web developer dan desainer UI/UX yang membuat website jelas dan
+              cepat untuk usaha kecil dan tim.
+            </p>
+          </div>
+          <div class="col-6 col-lg-3 offset-lg-1">
+            <h4>Halaman</h4>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="about.html">Tentang</a></li>
+              <li><a href="project.html">Karya</a></li>
+              <li><a href="about.html#skills">Keahlian</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <h4>Kontak</h4>
+            <ul>
+              <li>
+                <a href="mailto:yudiawaludin@gmail.com"
+                  >yudiawaludin@gmail.com</a
+                >
+              </li>
+              <li><a href="https://www.instagram.com/yudwalldnn?xtok=MWNpb3B0emY3cjNtaQ==">Instagram</a></li>
+              <li><a href="https://github.com/yudiiAwaludinn">GitHub</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+          <div class="footer-bottom">
+          <span
+            >&copy; <span id="year"></span> Yudi Awaludin. Hak cipta
+            dilindungi.</span
+          ><a href="#top">Kembali ke atas &uarr;</a>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

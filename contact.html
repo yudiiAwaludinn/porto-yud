@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="id" data-theme="light" data-bs-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kontak | Yudi Awaludin</title>
+    <meta name="description" content="Hubungi Yudi Awaludin untuk proyek website atau desain UI/UX." />
+    <script>
+      /* Terapkan tema sebelum halaman digambar agar tidak berkedip */
+      (function () {
+        var t = null;
+        try { t = localStorage.getItem("theme"); } catch (e) {}
+        if (t !== "dark" && t !== "light") t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+        document.documentElement.setAttribute("data-bs-theme", t);
+      })();
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="top">
+    <nav class="navbar navbar-expand-lg navbar-dark site-nav sticky-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Yudi Awaludin</a>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Buka menu navigasi">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">Tentang</a></li>
+            <li class="nav-item"><a class="nav-link" href="project.html">Karya</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="contact.html">Kontak</a></li>
+            <li class="nav-item">
+              <button type="button" class="theme-toggle" id="themeToggle" aria-label="Ganti ke mode gelap" aria-pressed="false"><i class="fa-solid fa-moon" aria-hidden="true"></i></button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Kontak -->
+      <section id="contact" class="section contact">
+        <div class="container">
+          <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+              <span class="status-pill">Tersedia untuk proyek baru</span>
+              <h2>Punya proyek? Mari ngobrol.</h2>
+              <p class="intro">
+                Ceritakan kebutuhan Anda dan kapan dibutuhkan. Saya akan
+                membalas dalam dua hari kerja dengan pertanyaan atau rencana
+                awal.
+              </p>
+              <ul class="contact-methods">
+                <li>
+                  <a href="mailto:yudiawaludin@gmail.com"
+                    ><span class="icon"
+                      ><i class="fa-solid fa-envelope"></i></span
+                    ><span><small>Email</small>yudiawaludin@gmail.com</span></a
+                  >
+                </li>
+                <li>
+                  <a href="https://wa.me/620000000000"
+                    ><span class="icon"
+                      ><i class="fa-brands fa-whatsapp"></i></span
+                    ><span><small>WhatsApp</small>+62 822 2637 ****</span></a
+                  >
+                </li>
+                <li>
+                  <div class="row-item">
+                    <span class="icon"
+                      ><i class="fa-solid fa-location-dot"></i></span
+                    ><span><small>Lokasi</small>Kab. Bandung, Indonesia</span>
+                  </div>
+                </li>
+              </ul>
+              <div class="socials">
+                <a href="https://www.instagram.com/yudwalldnn?xtok=MWNpb3B0emY3cjNtaQ==" aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a href="https://github.com/yudiiAwaludinn" aria-label="GitHub"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="#" aria-label="LinkedIn"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <form id="contactForm" class="form-card" novalidate>
+                <h3>Kirim pesan</h3>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name">Nama</label
+                    ><input
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      name="name"
+                      placeholder="Nama Anda"
+                      autocomplete="name"
+                      required
+                    /><div class="field-error" id="nameError"></div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email">Email</label
+                    ><input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      name="email"
+                      placeholder="Email Anda"
+                      autocomplete="email"
+                      required
+                    /><div class="field-error" id="emailError"></div>
+                  </div>
+                  <div class="col-12">
+                    <label for="type">Apa yang Anda butuhkan?</label>
+                    <textarea
+                      class="form-control"
+                      id="type"
+                      name="type"
+                      placeholder="Ceritakan kebutuhan anda"
+                      rows="5"
+                      required
+                    ></textarea>
+                    <div class="field-error" id="typeError"></div>
+                  </div>
+                  <div class="col-12">
+                    <label for="message">Detail proyek</label
+                    ><textarea
+                      class="form-control"
+                      id="message"
+                      name="message"
+                      placeholder="Detail proyek"
+                      rows="5"
+                      required
+                    ></textarea><div class="field-error" id="messageError"></div>
+                  </div>
+                  <div class="col-12">
+                    <button type="submit" class="btn-solid border-0">
+                      Kirim pesan
+                    </button>
+                    <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-4">
+            <a href="index.html" class="brand">Yudi Awaludin</a>
+            <p>
+              Web developer dan desainer UI/UX yang membuat website jelas dan
+              cepat untuk usaha kecil dan tim.
+            </p>
+          </div>
+          <div class="col-6 col-lg-3 offset-lg-1">
+            <h4>Halaman</h4>
+            <ul>
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="about.html">Tentang</a></li>
+              <li><a href="project.html">Karya</a></li>
+              <li><a href="about.html#skills">Keahlian</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-lg-4">
+            <h4>Kontak</h4>
+            <ul>
+              <li>
+                <a href="mailto:yudiawaludin@gmail.com"
+                  >yudiawaludin@gmail.com</a
+                >
+              </li>
+              <li><a href="https://www.instagram.com/yudwalldnn?xtok=MWNpb3B0emY3cjNtaQ==">Instagram</a></li>
+              <li><a href="https://github.com/yudiiAwaludinn">GitHub</a></li>
+              <li><a href="#">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
+          <div class="footer-bottom">
+          <span
+            >&copy; <span id="year"></span> Yudi Awaludin. Hak cipta
+            dilindungi.</span
+          ><a href="#top">Kembali ke atas &uarr;</a>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
